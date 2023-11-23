@@ -9,22 +9,13 @@ import random
 
 class Game:
     def __init__(self):
-        self.question = 'Name something that might be brewing'
-        self.answers = {'A Plot': 3,
-                        'A Storm': 5,
-                        'Beer': 28,
-                        'Coffee': 37,
-                        'Tea': 17,
-                        'Trouble': 8
-                        }
+        self.question = ''
+        self.answers = {}
         self.points = 0
         self.countdown = 45
         self.pool = []
         self.seed = 0
 
-        def get_question_and_answers(self):
-            pass
-    
 
     def timer(self):
         seconds = self.countdown
@@ -33,6 +24,7 @@ class Game:
             print(timeformat, end='\r')
             sleep(1)
             seconds -= 1
+
 
     def set_seed(self):
         self.seed = random.randint(0, len(self.pool))
@@ -70,9 +62,6 @@ class Family:
         print('\nNow, let\'s determine turn order.\n')
         for i in range(num_players):
             self.members.append(input(f'Who is in position {i + 1}?: '))
-    
-    
-
 
 
 def main():
