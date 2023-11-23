@@ -1,0 +1,812 @@
+[
+    {
+        "Question": "Name A Number That\u2019s Associated With Being Lucky Or Unlucky",
+        "Answer 1": "7",
+        "#1": "68",
+        "Answer 2": "13",
+        "#2": "26",
+        "Answer 3": "3",
+        "#3": "5"
+    },
+    {
+        "Question": "Name The Most Used Piece Of Furniture In A House.",
+        "Answer 1": "Couch",
+        "#1": "55",
+        "Answer 2": "Bed",
+        "#2": "23",
+        "Answer 3": "Arm Chair",
+        "#3": "15"
+    },
+    {
+        "Question": "Name A Job In Which An Attractive Person Probably Makes Better Tips.",
+        "Answer 1": "Server",
+        "#1": "65",
+        "Answer 2": "Exotic Dancer",
+        "#2": "19",
+        "Answer 3": "Bartender",
+        "#3": "13"
+    },
+    {
+        "Question": "Name A Prop used By Tap Dancers",
+        "Answer 1": "Cane",
+        "#1": "65",
+        "Answer 2": "Top Hat",
+        "#2": "28",
+        "Answer 3": "Baton",
+        "#3": "5"
+    },
+    {
+        "Question": "If You Drew Homer Simpson\u2019s Name In A Secret Santa Exchange, What Would You Buy Him?",
+        "Answer 1": "Beer",
+        "#1": "67",
+        "Answer 2": "Donuts",
+        "#2": "24",
+        "Answer 3": "Bowling Ball",
+        "#3": "5"
+    },
+    {
+        "Question": "Name Something You Do To An Item Before Giving It As A Gift",
+        "Answer 1": "Wrap It",
+        "#1": "61",
+        "Answer 2": "Remove Price Tag",
+        "#2": "27",
+        "Answer 3": "Buy It",
+        "#3": "4"
+    },
+    {
+        "Question": "Name A Place Where It Might Be Romantic To Get Stranded With Your Partner",
+        "Answer 1": "Island/Beach",
+        "#1": "61",
+        "Answer 2": "Park",
+        "#2": "28",
+        "Answer 3": "Cabin/Lodge",
+        "#3": "6"
+    },
+    {
+        "Question": "Name A Good Gift For Someone Who Is Always Late.",
+        "Answer 1": "Watch",
+        "#1": "58",
+        "Answer 2": "Alarm Clock",
+        "#2": "34",
+        "Answer 3": "Calendar",
+        "#3": "3"
+    },
+    {
+        "Question": "Why Might A Family Move Into A Bigger House?",
+        "Answer 1": "Family Has Grown",
+        "#1": "61",
+        "Answer 2": "Want More Space",
+        "#2": "33",
+        "Answer 3": "Can Afford More",
+        "#3": "5"
+    },
+    {
+        "Question": "Other Than Movie Tickets, Name Something A Crowded Movie Theatre Might Run Out Of.",
+        "Answer 1": "Popcorn",
+        "#1": "51",
+        "Answer 2": "Space",
+        "#2": "30",
+        "Answer 3": "Candy",
+        "#3": "8"
+    },
+    {
+        "Question": "Name Something You Should Probably Book Ahead Of Time If You\u2019re Going On Vacation.",
+        "Answer 1": "Hotel",
+        "#1": "73",
+        "Answer 2": "Flight",
+        "#2": "23",
+        "Answer 3": "Car",
+        "#3": "3"
+    },
+    {
+        "Question": "Name Something People Bet On",
+        "Answer 1": "Horses Races",
+        "#1": "68",
+        "Answer 2": "Sports",
+        "#2": "20",
+        "Answer 3": "Card Games",
+        "#3": "10"
+    },
+    {
+        "Question": "Name A Character Who\u2019s Known For Almost Ruining Christmas.",
+        "Answer 1": "Grinch",
+        "#1": "67",
+        "Answer 2": "Ebenezer Scrooge",
+        "#2": "28",
+        "Answer 3": "Charlie Brown",
+        "#3": "4"
+    },
+    {
+        "Question": "Name A City Where You\u2019d Hate The Long Commute To Work.",
+        "Answer 1": "New York City",
+        "#1": "53",
+        "Answer 2": "Los Angeles",
+        "#2": "21",
+        "Answer 3": "Chicago",
+        "#3": "18"
+    },
+    {
+        "Question": "Name Something That\u2019s Not Allowed In Some Hotels.",
+        "Answer 1": "Pets",
+        "#1": "61",
+        "Answer 2": "Smoking",
+        "#2": "29",
+        "Answer 3": "Children",
+        "#3": "5"
+    },
+    {
+        "Question": "Name Something That Might Happen If You Eat While Driving.",
+        "Answer 1": "Crash",
+        "#1": "71",
+        "Answer 2": "Spill",
+        "#2": "17",
+        "Answer 3": "Choke",
+        "#3": "11"
+    },
+    {
+        "Question": "If Adults Trick Or Treated, What Might They Request Instead Of Candy?",
+        "Answer 1": "Money",
+        "#1": "74",
+        "Answer 2": "Alcohol",
+        "#2": "17",
+        "Answer 3": "Cigarettes",
+        "#3": "4"
+    },
+    {
+        "Question": "Name A Word Or Phrase Used For Cooking On The Grill",
+        "Answer 1": "Barbecue",
+        "#1": "64",
+        "Answer 2": "Grilling",
+        "#2": "30",
+        "Answer 3": "Cookout",
+        "#3": "5"
+    },
+    {
+        "Question": "What Might You Ask To Borrow From Someone At The Laundromat?",
+        "Answer 1": "Detergent",
+        "#1": "69",
+        "Answer 2": "Change",
+        "#2": "24",
+        "Answer 3": "Dryer Sheets",
+        "#3": "6"
+    },
+    {
+        "Question": "Which Festive Holiday Was More Fun When You Were A Kid?",
+        "Answer 1": "Christmas",
+        "#1": "51",
+        "Answer 2": "Halloween",
+        "#2": "19",
+        "Answer 3": "Easter",
+        "#3": "16"
+    },
+    {
+        "Question": "What Would You Be Surprised To Hear That A Married Couple Does Separately?",
+        "Answer 1": "Sleep",
+        "#1": "59",
+        "Answer 2": "Vacation",
+        "#2": "16",
+        "Answer 3": "Eat Meals",
+        "#3": "13"
+    },
+    {
+        "Question": "Name A Reason You Wouldn\u2019t Want To Live Next Door To A Movie Star",
+        "Answer 1": "Paparazzi",
+        "#1": "66",
+        "Answer 2": "Loud Parties",
+        "#2": "19",
+        "Answer 3": "Fans",
+        "#3": "9"
+    },
+    {
+        "Question": "On A Resume, What Might A Person Claim They Can Do Quickly?",
+        "Answer 1": "Type",
+        "#1": "53",
+        "Answer 2": "Learn",
+        "#2": "21",
+        "Answer 3": "Finish Tasks",
+        "#3": "12"
+    },
+    {
+        "Question": "Name Something That Parent Of A Baby Is Constantly Listening For",
+        "Answer 1": "Crying",
+        "#1": "62",
+        "Answer 2": "Breathing",
+        "#2": "32",
+        "Answer 3": "First Words",
+        "#3": "5"
+    },
+    {
+        "Question": "Other Than Boxing, Name A Sport In Which You\u2019re Likely To See Athletes Fighting",
+        "Answer 1": "Hockey",
+        "#1": "62",
+        "Answer 2": "Wrestling",
+        "#2": "28",
+        "Answer 3": "Football",
+        "#3": "8"
+    },
+    {
+        "Question": "Name Something Nice You Get Sick Of Saying During The Holidays",
+        "Answer 1": "Merry Christmas",
+        "#1": "51",
+        "Answer 2": "Thank You",
+        "#2": "22",
+        "Answer 3": "Great To See You",
+        "#3": "16"
+    },
+    {
+        "Question": "Name A Place Where People Wear Very Little Clothing During The Winter",
+        "Answer 1": "Vacation",
+        "#1": "64",
+        "Answer 2": "Home",
+        "#2": "13",
+        "Answer 3": "Gym",
+        "#3": "9"
+    },
+    {
+        "Question": "Name A Phrase That Often Appears In Children\u2019S Stories",
+        "Answer 1": "Once Upon A Time",
+        "#1": "79",
+        "Answer 2": "The End",
+        "#2": "10",
+        "Answer 3": "Happily Ever After",
+        "#3": "9"
+    },
+    {
+        "Question": "What Do People Say At Halloween That Would Be Inappropriate To Hear At Christmas?",
+        "Answer 1": "Trick Or Treat",
+        "#1": "67",
+        "Answer 2": "Boo",
+        "#2": "28",
+        "Answer 3": "Happy Halloween",
+        "#3": "4"
+    },
+    {
+        "Question": "Name A Drink Usually Associated With Christmas",
+        "Answer 1": "Egg Nog",
+        "#1": "53",
+        "Answer 2": "Cider",
+        "#2": "21",
+        "Answer 3": "Hot Chocolate",
+        "#3": "16"
+    },
+    {
+        "Question": "Name Something Tha Can Be Pumped",
+        "Answer 1": "Gas",
+        "#1": "58",
+        "Answer 2": "Tire",
+        "#2": "24",
+        "Answer 3": "Iron",
+        "#3": "8"
+    },
+    {
+        "Question": "Other Than Illness, Name An Acceptable Excuse For Missing Work.",
+        "Answer 1": "Funeral",
+        "#1": "61",
+        "Answer 2": "Car Trouble",
+        "#2": "30",
+        "Answer 3": "Jury Duty",
+        "#3": "8"
+    },
+    {
+        "Question": "Who In Your Life Is Most Likely To Brad About You?",
+        "Answer 1": "Parent",
+        "#1": "60",
+        "Answer 2": "Partner",
+        "#2": "24",
+        "Answer 3": "Kids",
+        "#3": "4"
+    },
+    {
+        "Question": "We Asked 100 Wives: Name A Place Where You Wouldn\u2019t Want Your Husband To Go With His Buddies.",
+        "Answer 1": "Gentleman\u2019s Club",
+        "#1": "65",
+        "Answer 2": "The Bar",
+        "#2": "31",
+        "Answer 3": "Las Vegas",
+        "#3": "3"
+    },
+    {
+        "Question": "Name A Crime That Some People Probably Commit Every Day.",
+        "Answer 1": "Speeding",
+        "#1": "62",
+        "Answer 2": "Jaywalking",
+        "#2": "18",
+        "Answer 3": "Littering",
+        "#3": "18"
+    },
+    {
+        "Question": "Name Something A Grown Woman Might Lie About, But A Young Girl Wouldn\u2019t",
+        "Answer 1": "Age",
+        "#1": "61",
+        "Answer 2": "Weight",
+        "#2": "28",
+        "Answer 3": "Love Life",
+        "#3": "9"
+    },
+    {
+        "Question": "Name A Decoration You Might Find Inside A Mexican Restaurant",
+        "Answer 1": "Sombrero",
+        "#1": "58",
+        "Answer 2": "Pinata",
+        "#2": "22",
+        "Answer 3": "Maracas",
+        "#3": "6"
+    },
+    {
+        "Question": "What Might You See Inside A Bag Of Chips That Would Make You Stop Eating Them?",
+        "Answer 1": "Hair",
+        "#1": "63",
+        "Answer 2": "Bug",
+        "#2": "15",
+        "Answer 3": "Mold",
+        "#3": "9"
+    },
+    {
+        "Question": "Name Something Tourists Point Up At",
+        "Answer 1": "Tall Buildings",
+        "#1": "68",
+        "Answer 2": "Statues/ Monuments",
+        "#2": "14",
+        "Answer 3": "Mountains",
+        "#3": "6"
+    },
+    {
+        "Question": "What Do Some People Do Immediately After Breaking Up, And Others Take Time To Do?",
+        "Answer 1": "Date Again",
+        "#1": "55",
+        "Answer 2": "Mourn",
+        "#2": "29",
+        "Answer 3": "Move On",
+        "#3": "11"
+    },
+    {
+        "Question": "Name Something Considerate That People Often Do For You In An Elevator",
+        "Answer 1": "Hold Door",
+        "#1": "51",
+        "Answer 2": "Push Button",
+        "#2": "28",
+        "Answer 3": "Move Over",
+        "#3": "16"
+    },
+    {
+        "Question": "If You Live In The Country, Name A Type Of Lights That You Don\u2019t See At Night.",
+        "Answer 1": "Street Lights",
+        "#1": "64",
+        "Answer 2": "Traffic",
+        "#2": "21",
+        "Answer 3": "Neon Light",
+        "#3": "10"
+    },
+    {
+        "Question": "Name Something You Might Add Milk To In The Morning.",
+        "Answer 1": "Cold Cereal",
+        "#1": "67",
+        "Answer 2": "Coffee",
+        "#2": "17",
+        "Answer 3": "Oatmeal",
+        "#3": "3"
+    },
+    {
+        "Question": "Name Something Children Wear, But Adults Don\u2019t",
+        "Answer 1": "Diaper",
+        "#1": "58",
+        "Answer 2": "Bib",
+        "#2": "16",
+        "Answer 3": "Overalls",
+        "#3": "12"
+    },
+    {
+        "Question": "Name Something That A Demanding Bride May Ask Her Maid-Of_Honor To do That Could End Their Friendship.",
+        "Answer 1": "Wear An Ugly Dress",
+        "#1": "46",
+        "Answer 2": "Lie For Her",
+        "#2": "32",
+        "Answer 3": "Pay For Dress",
+        "#3": "17"
+    },
+    {
+        "Question": "Name A Profession Where You Might Have A Dog For A Sidekick",
+        "Answer 1": "Police Officer",
+        "#1": "52",
+        "Answer 2": "Firefighter",
+        "#2": "26",
+        "Answer 3": "Performer",
+        "#3": "9"
+    },
+    {
+        "Question": "We Asked 100 Single People: Who In Your Life Gives You The Most Pressure To Settle Down and Marry?",
+        "Answer 1": "Mom",
+        "#1": "55",
+        "Answer 2": "Friends",
+        "#2": "24",
+        "Answer 3": "Person I\u2019m Dating",
+        "#3": "8"
+    },
+    {
+        "Question": "Name A Form Of Communication That Few People Use Anymore.",
+        "Answer 1": "Written Letters",
+        "#1": "55",
+        "Answer 2": "Telegraph",
+        "#2": "31",
+        "Answer 3": "Phone",
+        "#3": "6"
+    },
+    {
+        "Question": "Name A Profession That Has To Worry About Getting Sued",
+        "Answer 1": "Doctor",
+        "#1": "54",
+        "Answer 2": "Lawyer",
+        "#2": "31",
+        "Answer 3": "Police Officer",
+        "#3": "8"
+    },
+    {
+        "Question": "Name Something You Need To Eat Before It Melts.",
+        "Answer 1": "Ice Cream",
+        "#1": "56",
+        "Answer 2": "Chocolate",
+        "#2": "24",
+        "Answer 3": "Popsicle",
+        "#3": "12"
+    },
+    {
+        "Question": "Name A prize You May Win From A Carnival Game.",
+        "Answer 1": "Stuffed Animal",
+        "#1": "75",
+        "Answer 2": "Gold Fish",
+        "#2": "11",
+        "Answer 3": "Poster",
+        "#3": "6"
+    },
+    {
+        "Question": "Name Something Drivers Often Do If They Spot A Police Car Up Ahead",
+        "Answer 1": "Slow Down",
+        "#1": "71",
+        "Answer 2": "Move Over",
+        "#2": "12",
+        "Answer 3": "Put Seatbelt On",
+        "#3": "4"
+    },
+    {
+        "Question": "Name An Animal That You See More Of In The City.",
+        "Answer 1": "Cat",
+        "#1": "63",
+        "Answer 2": "Pigeon",
+        "#2": "18",
+        "Answer 3": "Rat",
+        "#3": "15"
+    },
+    {
+        "Question": "Name Something Kids Might Collect From The Beach",
+        "Answer 1": "Shells",
+        "#1": "68",
+        "Answer 2": "Sand",
+        "#2": "15",
+        "Answer 3": "Rocks",
+        "#3": "15"
+    },
+    {
+        "Question": "Name Something It Would Be Rude Not To Do When Being Introduced To A Stranger",
+        "Answer 1": "Shake Hands",
+        "#1": "56",
+        "Answer 2": "Smile",
+        "#2": "23",
+        "Answer 3": "Say Hello",
+        "#3": "9"
+    },
+    {
+        "Question": "Name A Skill That\u2019s More Important For Teens To Learn Today, Than Previously",
+        "Answer 1": "Computer Skills",
+        "#1": "63",
+        "Answer 2": "Driving",
+        "#2": "30",
+        "Answer 3": "Second Language",
+        "#3": "3"
+    },
+    {
+        "Question": "Name Something People Wear To Avoid A Sunburn",
+        "Answer 1": "Sunscreen",
+        "#1": "55",
+        "Answer 2": "Hat",
+        "#2": "33",
+        "Answer 3": "Shirt/Coverup",
+        "#3": "5"
+    },
+    {
+        "Question": "Name A Specific Person You\u2019d Ask To Help You Move If You Were In A Jam.",
+        "Answer 1": "Friend",
+        "#1": "42",
+        "Answer 2": "Parent",
+        "#2": "38",
+        "Answer 3": "Sibling",
+        "#3": "18"
+    },
+    {
+        "Question": "Name Something Parents Of Twins Do That Makes Their Children Seem Even More Similar.",
+        "Answer 1": "Dress Alike",
+        "#1": "67",
+        "Answer 2": "Hair Style",
+        "#2": "21",
+        "Answer 3": "Similar Names",
+        "#3": "11"
+    },
+    {
+        "Question": "Other Than To Buy Books, Why Might Someone Go To A Bookstore?",
+        "Answer 1": "Read",
+        "#1": "58",
+        "Answer 2": "Coffee",
+        "#2": "31",
+        "Answer 3": "Socialize",
+        "#3": "5"
+    },
+    {
+        "Question": "What Do You Find Out About A Town By Reading Signs On The Side Of The Road?",
+        "Answer 1": "Population",
+        "#1": "60",
+        "Answer 2": "Town Name",
+        "#2": "30",
+        "Answer 3": "Speed Limit",
+        "#3": "8"
+    },
+    {
+        "Question": "Name A Profession That\u2019s Only Successful If People Are Laughing At Them.",
+        "Answer 1": "Comedian",
+        "#1": "63",
+        "Answer 2": "Clown",
+        "#2": "31",
+        "Answer 3": "Sports Mascot",
+        "#3": "3"
+    },
+    {
+        "Question": "Tell Me A Reason People Give For Wearing Black.",
+        "Answer 1": "Funeral",
+        "#1": "59",
+        "Answer 2": "Slimming",
+        "#2": "27",
+        "Answer 3": "Style",
+        "#3": "12"
+    },
+    {
+        "Question": "If An Alien Gave You A Guided Tour Of Outer Space, What Would Be Must-See Stops?",
+        "Answer 1": "Other Planets",
+        "#1": "50",
+        "Answer 2": "Moon",
+        "#2": "22",
+        "Answer 3": "Sun",
+        "#3": "16"
+    },
+    {
+        "Question": "What Might A Parent Videotape Their Child Doing Around The Christmas Holiday?",
+        "Answer 1": "Opening Presents",
+        "#1": "65",
+        "Answer 2": "Being In Pageant",
+        "#2": "27",
+        "Answer 3": "Visiting Santa",
+        "#3": "5"
+    },
+    {
+        "Question": "What Is A Color That You Would See On A Country\u2019s Flag?",
+        "Answer 1": "Red",
+        "#1": "70",
+        "Answer 2": "Blue",
+        "#2": "19",
+        "Answer 3": "White",
+        "#3": "3"
+    },
+    {
+        "Question": "Name A Song That Has \u201cChristmas\u201d In The Title",
+        "Answer 1": "White Christmas",
+        "#1": "55",
+        "Answer 2": "Oh Christmas Tree",
+        "#2": "21",
+        "Answer 3": "Wish You Merry Xmas",
+        "#3": "18"
+    },
+    {
+        "Question": "Name Something Santa Does That You wouldn\u2019t want Your House guest To Do.",
+        "Answer 1": "Come Down Chimney",
+        "#1": "59",
+        "Answer 2": "Eat Your Coookies",
+        "#2": "24",
+        "Answer 3": "Arrive Late at Night",
+        "#3": "13"
+    },
+    {
+        "Question": "Other Than Displays Of Affection, Name Something You Wish Couples Wouldn\u2019t Do In Public.",
+        "Answer 1": "Fight",
+        "#1": "68",
+        "Answer 2": "Feed Each Other",
+        "#2": "13",
+        "Answer 3": "Baby Talk",
+        "#3": "5"
+    },
+    {
+        "Question": "Name A Reason You Might Dread Going To A New Year\u2019s Party At A Club.",
+        "Answer 1": "Crowded",
+        "#1": "53",
+        "Answer 2": "No Date",
+        "#2": "21",
+        "Answer 3": "Don\u2019t Drink",
+        "#3": "18"
+    },
+    {
+        "Question": "Which Color Would You Be Surprised To See A Bride Wearing On Her Wedding Day?",
+        "Answer 1": "Black",
+        "#1": "74",
+        "Answer 2": "Red",
+        "#2": "21",
+        "Answer 3": "Green",
+        "#3": "4"
+    },
+    {
+        "Question": "Name Something You\u2019D Hate To Find Floating In Your Coffee",
+        "Answer 1": "Bug",
+        "#1": "54",
+        "Answer 2": "Hair",
+        "#2": "29",
+        "Answer 3": "Food Crumb",
+        "#3": "8"
+    },
+    {
+        "Question": "Name Something Santa Does, That You Wouldn\u2019t Want Your House Guests To Do.",
+        "Answer 1": "Come Down Chimney",
+        "#1": "59",
+        "Answer 2": "Eat Your Cookies",
+        "#2": "24",
+        "Answer 3": "Arrive Late At Nite",
+        "#3": "13"
+    },
+    {
+        "Question": "Name A Specific Night Of The Year That You Hope To Be Kissed.",
+        "Answer 1": "New Year Eve\u2019s",
+        "#1": "48",
+        "Answer 2": "Valentine\u2019s",
+        "#2": "25",
+        "Answer 3": "Christmas",
+        "#3": "13"
+    },
+    {
+        "Question": "Name Something That You Can Get For Free At A Casino.",
+        "Answer 1": "Drinks",
+        "#1": "49",
+        "Answer 2": "Food",
+        "#2": "33",
+        "Answer 3": "Entertainment",
+        "#3": "5"
+    },
+    {
+        "Question": "Name A Person Who You\u2019d Never Trust to Set You Up On A Blind Date",
+        "Answer 1": "Mother",
+        "#1": "66",
+        "Answer 2": "Sibling",
+        "#2": "20",
+        "Answer 3": "Ex",
+        "#3": "9"
+    },
+    {
+        "Question": "If You See Pink Frosting On A Cake, What Flavor Would You Expect It To Be",
+        "Answer 1": "Strawberry",
+        "#1": "73",
+        "Answer 2": "Cherry",
+        "#2": "16",
+        "Answer 3": "Raspberry",
+        "#3": "10"
+    },
+    {
+        "Question": "Name Something You\u2019d Take Camping But Be Arrested For If You Brought It To A Bank.",
+        "Answer 1": "Gun",
+        "#1": "49",
+        "Answer 2": "Hatchet",
+        "#2": "34",
+        "Answer 3": "Alcohol",
+        "#3": "17"
+    },
+    {
+        "Question": "Before Visiting A New City, Name Something For Which You Might Get A Recommendation.",
+        "Answer 1": "Places To Stay",
+        "#1": "56",
+        "Answer 2": "Restaurant",
+        "#2": "24",
+        "Answer 3": "Attraction",
+        "#3": "7"
+    },
+    {
+        "Question": "Name A Reason Why It\u2019s Hard To Slow Dance With A Ghost.",
+        "Answer 1": "Can\u2019t See Them",
+        "#1": "66",
+        "Answer 2": "Nothing To Hold",
+        "#2": "17",
+        "Answer 3": "Can\u2019t Lead",
+        "#3": "16"
+    },
+    {
+        "Question": "Name A Decoration You Might Find Inside A Mexican Restaurant.",
+        "Answer 1": "Sombrero",
+        "#1": "58",
+        "Answer 2": "Pinata",
+        "#2": "22",
+        "Answer 3": "Maracas",
+        "#3": "6"
+    },
+    {
+        "Question": "Name Something A Dad Would Look Silly Borrowing From His Child At The Bowling Alley.",
+        "Answer 1": "Shoes",
+        "#1": "64",
+        "Answer 2": "Lightweight Ball",
+        "#2": "19",
+        "Answer 3": "Money",
+        "#3": "15"
+    },
+    {
+        "Question": "Name A Famous Robert Who Many Women Consider Handsome.",
+        "Answer 1": "Robert Redford",
+        "#1": "51",
+        "Answer 2": "Robert De Niro",
+        "#2": "34",
+        "Answer 3": "Robert Kennedy",
+        "#3": "4"
+    },
+    {
+        "Question": "Name An Article Of Clothing That Most People Have 10 Of.",
+        "Answer 1": "Pairs Of Shoes",
+        "#1": "57",
+        "Answer 2": "Pairs Of Socks",
+        "#2": "21",
+        "Answer 3": "Shirts",
+        "#3": "17"
+    },
+    {
+        "Question": "Name Something A Man Might Do At The Gym To Impress A Woman.",
+        "Answer 1": "Lift Weights",
+        "#1": "55",
+        "Answer 2": "Flex",
+        "#2": "24",
+        "Answer 3": "Take Off Shirt",
+        "#3": "10"
+    },
+    {
+        "Question": "Name Something People Wait In Line For On Hot Days",
+        "Answer 1": "Ice Cream",
+        "#1": "66",
+        "Answer 2": "Cold Drinks",
+        "#2": "23",
+        "Answer 3": "Water Park",
+        "#3": "10"
+    },
+    {
+        "Question": "Name Something A Contestant In A Beauty Pageant Might Wear",
+        "Answer 1": "Bathing Suit",
+        "#1": "56",
+        "Answer 2": "Gown",
+        "#2": "39",
+        "Answer 3": "Makeup",
+        "#3": "2"
+    },
+    {
+        "Question": "Name A Kind Of Cookie People Love To Dunk In Milk",
+        "Answer 1": "Chocolate Chip",
+        "#1": "54",
+        "Answer 2": "Oreo",
+        "#2": "42",
+        "Answer 3": "Oatmeal",
+        "#3": "5"
+    },
+    {
+        "Question": "Name A Night Of The Week When People Stay Up Later Than Usual",
+        "Answer 1": "Friday",
+        "#1": "52",
+        "Answer 2": "Saturday",
+        "#2": "43",
+        "Answer 3": "Sunday",
+        "#3": "3"
+    },
+    {
+        "Question": "If There Was An Award For \u201cLoudest In The Zoo,\u201d Which Animal Would Win It?",
+        "Answer 1": "Lion",
+        "#1": "41",
+        "Answer 2": "Elephant",
+        "#2": "34",
+        "Answer 3": "Monkey",
+        "#3": "19"
+    }
+]
