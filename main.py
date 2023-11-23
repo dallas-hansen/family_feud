@@ -9,12 +9,13 @@ import random
 
 class Game:
     def __init__(self):
+        self.seed = 0
+        self.pool = []
         self.question = ''
         self.answers = {}
+        self.num_of_answers = 0
         self.points = 0
         self.countdown = 45
-        self.pool = []
-        self.seed = 0
 
 
     def timer(self):
@@ -27,7 +28,7 @@ class Game:
 
 
     def set_seed(self):
-        self.seed = random.randint(0, len(self.pool))
+        self.seed = random.randint(0, len(self.pool) - 1)
     
 
     def fill_up_pool(self, pool_size=50):
@@ -46,6 +47,18 @@ class Game:
     def get_question(self):
         self.set_seed()
         self.question = self.pool[self.seed]["Question"]
+
+    
+    def get_answers(self):
+        seed = self.pool[self.seed]
+        self.num_of_answers = (len(seed) - 1) // 2
+        for num in range(self.num_of_answers):
+            answer = seed[f'Answer {num + 1}']
+            self.answers[f'{answer}'] = seed[f'#{num + 1}']
+
+
+    def display(self):
+        pass
         
 
 class Family:
@@ -71,6 +84,9 @@ def main():
     game.fill_up_pool()
     game.get_question()
     print(game.question)
+    game.get_answers()
+    print(f'Top {game.num_of_answers} answers on the board')
+    print(game.answers)
 
     # team_2 = Family(input('What is your team name?\n'))
 
