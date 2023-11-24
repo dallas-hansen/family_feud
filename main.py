@@ -14,6 +14,7 @@ class Game:
         self.question = ''
         self.answers = {}
         self.num_of_answers = 0
+        self.correct = []
         self.points = 0
         self.countdown = 45
 
@@ -33,6 +34,7 @@ class Game:
 
     def fill_up_pool(self, pool_size=50):
         json_files = glob.glob(r'questions_and_answers\json\*.json')
+        print(json_files)
 
         for file_path in json_files:
             with open(file_path, 'r') as file:
@@ -57,9 +59,43 @@ class Game:
             self.answers[f'{answer}'] = seed[f'#{num + 1}']
 
 
-    def display(self):
-        pass
+    def display(self, guess = ''):
+        answers = sorted(self.answers.items(), reverse=True, key=lambda item: int(item[1]))
+        word_box = '-' * 30
+        points_box = ('-' * 4)
+        print(f'\nTop {self.num_of_answers} answers on the board\n')
+        print(f'{self.question}\n')
+        for i in range(self.num_of_answers):
+            len_points_str = len(str(answers[i][1]))
+            answer = answers[i][0]
+            points = answers[i][1]
+            # prints top of box
+            print(' ' + word_box + ' ' + points_box)
+            print(f'| {i + 1}. ', end='')
+            # prints sides and middle of box
+            if self.survey_says(answer, points, guess):
+                print(answer + '|'.rjust((len(word_box)-3) - len(answer)) + ' ' + str(points) + '|'.rjust(4 - len_points_str))
+            else:
+                print((' ' * (len(word_box) - 4)) + '|' + '|'.rjust(5))
+                
+        print(' ' + word_box + ' ' + points_box)
+
+
         
+    
+    def survey_says(self, answer, points, guess = ''):
+        # Sorts dictionary into a list of tuples based off the value
+        guess = guess.lower()
+        answer = answer.lower()
+        if answer in self.correct:
+            return True                                
+        elif guess == answer:
+            self.correct.append(guess)
+            self.points += int(points)
+            return True
+        else:
+            return False 
+
 
 class Family:
     def __init__(self, name):
@@ -75,18 +111,30 @@ class Family:
         print('\nNow, let\'s determine turn order.\n')
         for i in range(num_players):
             self.members.append(input(f'Who is in position {i + 1}?: '))
+    
+    def guess(self):
+        guess = input()
+        return guess
 
 
 def main():
-    # team_1 = Family(input('What is your team name?\n'))
+    team_1 = Family(input('What is your team name?\n'))
     # team_1.add_players()
+    
     game = Game()
     game.fill_up_pool()
     game.get_question()
-    print(game.question)
     game.get_answers()
-    print(f'Top {game.num_of_answers} answers on the board')
+    game.display()
     print(game.answers)
+    end = input('Take a guess: ')
+    while end != 'stop':
+        game.display(end)
+        print(game.answers)
+        print(game.points)
+        end = input()
+    # game.display(team_1.guess())
+
 
     # team_2 = Family(input('What is your team name?\n'))
 
