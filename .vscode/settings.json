@@ -1,0 +1,11 @@
+{
+    "docwriter.style": "Auto-detect",
+    "workbench.colorCustomizations": {
+        "debugView.stateLabelForeground": "#ff0000",
+        "debugTokenExpression.string": "#F8800B",
+        "debugTokenExpression.name": "#24C8E0",
+        "debugTokenExpression.number": "#FF75C9",
+        "debugTokenExpression.value": "#ffe14a",
+        "debugTokenExpression.boolean": "#0d5747"
+      },
+}
