@@ -182,17 +182,14 @@ class Game:
                 print((' ' * (len(word_box) - 4)) + '|' + '|'.rjust(5) + f'{area_between_displays}', end='')
                 self.right_display()
                 self.increase_display_line_count()
+        print('\t ' + word_box + ' ' + points_box + f'{area_between_displays}', end='')
             
-        for i in range(7 - (self.num_of_answers + 1)):
-            print('\t ' + word_box + ' ' + points_box + area_between_displays, end='')
-            self.right_display()
-            self.increase_display_line_count()
-            print((' ' * (len(word_box) - 4)) + '|' + '|'.rjust(5) + f'{area_between_displays}', end='')
+        for i in range(7 - self.num_of_answers):
+            print('\t ' + (' ' * 37), end='')
             self.right_display()
             self.increase_display_line_count()
             
 
-        print('\t ' + word_box + ' ' + points_box + f'{area_between_displays}', end='')
         self.right_display()
         self.big_x()
         if debug:
@@ -423,4 +420,4 @@ def main(debug=False):
 
 
 if __name__ == '__main__':
-    main(True)
+    main()
