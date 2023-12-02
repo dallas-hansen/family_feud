@@ -31,6 +31,7 @@ class Game:
         self.points = 0
         self.countdown = 5
         self.host = ''
+        self.display_line_count = 0
 
 # TODO: create a working timer
     # def timer(self):
@@ -131,47 +132,87 @@ class Game:
         print(f'{self.host.team_1.name.upper()} score: {self.host.team_1.points}', end='\t')
         print(f'\t{self.host.team_2.name.upper()} score: {self.host.team_2.points}')
 
-    def line_break(self, symbol1='*', symbol2='*', length=70):
+    def line_break(self, symbol1='*', symbol2='*', length=70, second_symbol=True):
         # Prints a line break
-        print()
+        if second_symbol:
+            print()
         print(symbol1 * length)
-        print(symbol2 * length)
-        print()
+        if second_symbol:
+            print(symbol2 * length)
+            print()
+    
+    def increase_display_line_count(self, amount=1):
+        self.display_line_count += amount
 
 
     def display(self, round_over=False, debug=False):
         # Displays the gameboard#
         word_box = '-' * 30
         points_box = ('-' * 4)
+        area_between_displays = f'\t\t   '
         # Prints the team that is stealing
-        if self.host.is_stealing:
-            self.line_break('/', '\\', 28 + len(self.host.current_team.name))
-            print(f'Team {self.host.current_team.name} has a chance to steal!')
-            self.line_break('/', '\\', 28 + len(self.host.current_team.name))
+        # if self.host.is_stealing:
+        #     self.line_break('/', '\\', 28 + len(self.host.current_team.name))
+        #     print(f'Team {self.host.current_team.name} has a chance to steal!')
+        #     self.line_break('/', '\\', 28 + len(self.host.current_team.name))
         print(f'\t\tPOINTS: {self.points}\n')
         self.print_team_scores()
         print(f'\nTop {self.num_of_answers} answers on the board\n')
         print(f'{self.question}\n')
         # Loops through the answers and prints ones that were guessed correctly
         # Also prints the board around the answers
+        
+        
         for i in range(self.num_of_answers):
             len_points_str = len(str(self.answers[i][1]))
             answer = self.answers[i][0]
             points = self.answers[i][1]
             # prints top of box
-            print('\t ' + word_box + ' ' + points_box)
+            print('\t ' + word_box + ' ' + points_box + area_between_displays, end='')
+            self.right_display()
+            self.increase_display_line_count()
             print(f'\t| {i + 1}. ', end='')
             # prints sides and middle of box
             if i in self.correct_guesses or round_over:
-                print(answer + '|'.rjust((len(word_box)-3) - len(answer)) + ' ' + str(points) + '|'.rjust(4 - len_points_str))
+                print(answer + '|'.rjust((len(word_box)-3) - len(answer)) + ' ' \
+                    + str(points) + '|'.rjust(4 - len_points_str) + f'{area_between_displays}', end='')
+                self.right_display()
+                self.increase_display_line_count()
             else:
-                print((' ' * (len(word_box) - 4)) + '|' + '|'.rjust(5))
+                print((' ' * (len(word_box) - 4)) + '|' + '|'.rjust(5) + f'{area_between_displays}', end='')
+                self.right_display()
+                self.increase_display_line_count()
+            
+        for i in range(7 - (self.num_of_answers + 1)):
+            print('\t ' + word_box + ' ' + points_box + area_between_displays, end='')
+            self.right_display()
+            self.increase_display_line_count()
+            print((' ' * (len(word_box) - 4)) + '|' + '|'.rjust(5) + f'{area_between_displays}', end='')
+            self.right_display()
+            self.increase_display_line_count()
+            
 
-        print('\t ' + word_box + ' ' + points_box)
+        print('\t ' + word_box + ' ' + points_box + f'{area_between_displays}', end='')
+        self.right_display()
         self.big_x()
         if debug:
             print(f'strikes available = {self.host.strikes_available}')
             print(self.answers)
+            
+    def right_display(self, round_over=False, debug=False):
+        if self.host.is_stealing:
+            if self.display_line_count in [3, 8]:
+                self.line_break('/', '\\', 28 + len(self.host.current_team.name), second_symbol=False)
+            elif self.display_line_count in [4, 9]:
+                self.line_break('\\', '\\', 28 + len(self.host.current_team.name), second_symbol=False)
+            elif self.display_line_count in [5, 7]:
+                print()
+            elif self.display_line_count == 6:
+                print(f'Team {self.host.current_team.name} has a chance to steal!')
+            else:
+                return print()
+        else:
+            return print()
 
 
     def survey_says(self): # TODO: see if generative AI can help do this better
@@ -218,6 +259,7 @@ class Family:
         print()
 
     def guess(self):
+
         guess = input(f'{self.members[self.turn]}, what is your guess?: ')
         if self.turn + 1 == len(self.members):
             self.turn = 0
@@ -241,8 +283,11 @@ class Host:
         self.fast_money_contestant = ''
 
 
-    def reset(self, full_reset=False):
+    def reset(self, full_reset=False, soft=False):
         # Resets the game. Changes values to default values again.
+        if soft:
+            self.game.display_line_count = 0
+            return
         if self.team_1.turn > len(self.team_1.members) - 1:
             self.team_1.turn = 0
         if self.team_2.turn > len(self.team_2.members) - 1:
@@ -254,6 +299,7 @@ class Host:
         self.team_1.num_of_guesses = 0
         self.team_2.num_of_guesses = 0
         self.answers_still_on_board = True
+        self.game.display_line_count = 0
         if full_reset:
             self.game.points = 0
             self.game.correct_guesses = []
@@ -366,6 +412,7 @@ def main(debug=False):
         host.reset()
         # head to head
         while loop_condition(host):
+            host.reset(soft=True)
             game.line_break()
             game.display(debug=debug)
             host.get_guess()
