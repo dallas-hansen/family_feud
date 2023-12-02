@@ -7,7 +7,7 @@ from time import sleep
 
 
 def loop_condition(host):
-    if host.current_team.strikes == host.strikes_available:
+    if not host.is_stealing and host.current_team.strikes == host.strikes_available:
         return False
     elif host.team_1.points > 200 or host.team_2.points > 200:
         return False
@@ -47,6 +47,47 @@ class Game:
     #         self.timer_on = False
     #         self.host.add_strike()
 
+    
+    def face_off(self, player_1, player_2, debug=False):
+        rebuttle = False
+        won = False
+        guesses = 0
+        self.line_break()
+        print('\n HEAD TO HEAD, FIRST TO ANSWER!')
+        print(f'\n Would {player_1} and {player_2} please get ready\n')
+        print(input('\nPress "Enter" to continue\n'))
+        while not won:
+            while 0 not in self.correct_guesses:
+                self.line_break()
+                self.display(debug=debug)
+                self.host.guess = input('\t\tWhat is your guess?\n')
+                self.survey_says()
+                if rebuttle:
+                    break
+                elif self.host.guess_outcome:
+                    rebuttle = True
+                elif guesses > 3:
+                    print('Dang! Tough question, huh? Rock, Paper, Scissors to see who won!')
+                    sleep(6)
+                    break
+                if debug:
+                    print(self.correct_guesses)
+                guesses += 1
+            self.display(debug=debug)
+            won = True
+        
+        self.host.team_1.turn += 1
+        self.host.team_2.turn += 1
+        face_off_winner = input(f'\nWho won? (1 for {self.host.team_1.name}, 2 for {self.host.team_2.name})\n').lower()
+        pass
+        is_playing = True
+        pass_or_play = input('Pass or play? (p for pass, anything else for play)\n').lower()
+        if pass_or_play == 'p':
+            is_playing = False
+        if is_playing:
+            self.host.current_team = self.host.team_1 if face_off_winner == '1' else self.host.team_2   
+        else:
+            self.host.current_team = self.host.team_2 if face_off_winner == '1' else self.host.team_1   
 
     def set_seed(self):
         # Sets seed to a random number
@@ -98,9 +139,8 @@ class Game:
         print()
 
 
-    def display(self, round_over=False):
+    def display(self, round_over=False, debug=False):
         # Displays the gameboard#
-        guess = self.host.guess
         word_box = '-' * 30
         points_box = ('-' * 4)
         # Prints the team that is stealing
@@ -109,7 +149,6 @@ class Game:
             print(f'Team {self.host.current_team.name} has a chance to steal!')
             self.line_break('/', '\\', 28 + len(self.host.current_team.name))
         print(f'\t\tPOINTS: {self.points}\n')
-        print(f'strikes available = {self.host.strikes_available}')
         self.print_team_scores()
         print(f'\nTop {self.num_of_answers} answers on the board\n')
         print(f'{self.question}\n')
@@ -120,16 +159,19 @@ class Game:
             answer = self.answers[i][0]
             points = self.answers[i][1]
             # prints top of box
-            print(' ' + word_box + ' ' + points_box)
-            print(f'| {i + 1}. ', end='')
+            print('\t ' + word_box + ' ' + points_box)
+            print(f'\t| {i + 1}. ', end='')
             # prints sides and middle of box
             if i in self.correct_guesses or round_over:
                 print(answer + '|'.rjust((len(word_box)-3) - len(answer)) + ' ' + str(points) + '|'.rjust(4 - len_points_str))
             else:
                 print((' ' * (len(word_box) - 4)) + '|' + '|'.rjust(5))
 
-        print(' ' + word_box + ' ' + points_box)
+        print('\t ' + word_box + ' ' + points_box)
         self.big_x()
+        if debug:
+            print(f'strikes available = {self.host.strikes_available}')
+            print(self.answers)
 
 
     def survey_says(self): # TODO: see if generative AI can help do this better
@@ -155,7 +197,7 @@ class Game:
     def fast_money(self):
         self.line_break('$', '$', 70)
         print('congrats you made it fast money! Unfortunately nothing is here because I have not made it yet!')
-
+        print("\n you're honestly pretty lucky this code even let us get this far...\n")
 
 
 class Family:
@@ -169,13 +211,18 @@ class Family:
 
 
     def add_players(self):
-        num_players = int(input('How many are on your team?: '))
+        num_players = int(input(f'\nHow many are on team {self.name}?: '))
         print('\nNow, let\'s determine turn order.\n')
         for i in range(num_players):
             self.members.append(input(f'Who is in position {i + 1}?: '))
+        print()
 
     def guess(self):
-        guess = input(f'{self.name}, what is your guess?: ')
+        guess = input(f'{self.members[self.turn]}, what is your guess?: ')
+        if self.turn + 1 == len(self.members):
+            self.turn = 0
+        else:
+            self.turn += 1
         return guess
 
 
@@ -194,16 +241,23 @@ class Host:
         self.fast_money_contestant = ''
 
 
-    def reset(self):
+    def reset(self, full_reset=False):
         # Resets the game. Changes values to default values again.
+        if self.team_1.turn > len(self.team_1.members) - 1:
+            self.team_1.turn = 0
+        if self.team_2.turn > len(self.team_2.members) - 1:
+            self.team_2.turn = 0
+        self.is_stealing = False
         self.strikes_available = 3
         self.team_1.strikes = 0
         self.team_2.strikes = 0
         self.team_1.num_of_guesses = 0
         self.team_2.num_of_guesses = 0
-        self.game.correct_guesses = []
-        self.game.points = 0
         self.answers_still_on_board = True
+        if full_reset:
+            self.game.points = 0
+            self.game.correct_guesses = []
+            self.guess_outcome = False
 
 
     def next_round(self):
@@ -225,7 +279,6 @@ class Host:
         # Gets guess from player
         self.guess_outcome = False
         self.guess = self.current_team.guess()
-        self.game.timer_on = False
         self.current_team.num_of_guesses += 1
 
 
@@ -294,34 +347,33 @@ class Host:
             self.current_team = self.team_2
             
 
-
-def main():
+def main(debug=False):
     team_1 = Family(input('What is your team name?\n'))
-    # team_1.add_players()
+    team_1.add_players()
     team_2 = Family(input('What is your team name?\n'))
-    # team_2.add_players()
+    team_2.add_players()
     game = Game()
     game.fill_up_pool()
     host = Host(game, team_1, team_2)
     game.host = host
-    # timer_thread = Thread(target=host.game.timer)
-
+    
     while not game.game_over:
         host.next_round()
-        host.reset()
+        host.reset(full_reset=True)
         game.get_question()
         game.get_answers()
+        game.face_off(host.team_1.members[host.team_1.turn], host.team_2.members[host.team_2.turn], debug=debug)
+        host.reset()
+        # head to head
         while loop_condition(host):
             game.line_break()
-            game.display()
-            print(game.answers)
-            print(f'Current team: {host.current_team.name} number of guesses: {host.current_team.num_of_guesses}')
+            game.display(debug=debug)
             host.get_guess()
-            print(f'Current team: {host.current_team.name} number of guesses: {host.current_team.num_of_guesses}')
             host.check_guess()
+        game.display(round_over=True)
         host.game_over()
     game.fast_money()
 
 
 if __name__ == '__main__':
-    main()
+    main(True)
