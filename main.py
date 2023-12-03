@@ -3,7 +3,8 @@ import glob
 import random
 # import multiprocessing as mp
 from time import sleep
-
+from tkinter import *
+from tkinter import ttk
 
 
 def loop_condition(host):
@@ -61,7 +62,7 @@ class Game:
             while 0 not in self.correct_guesses:
                 self.line_break()
                 self.display(debug=debug)
-                self.host.guess = input('\t\tWhat is your guess?\n')
+                self.host.guess = input('What is your guess?\n')
                 self.survey_says()
                 if rebuttle:
                     break
