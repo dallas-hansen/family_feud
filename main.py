@@ -78,7 +78,7 @@ class Game:
             self.display(debug=debug)
             won = True
         
-        self.host.team_1.turn += 1
+        self.host.team_1.turn += 1 
         self.host.team_2.turn += 1
         face_off_winner = input(f'\nWho won? (1 for {self.host.team_1.name}, 2 for {self.host.team_2.name})\n').lower()
         pass

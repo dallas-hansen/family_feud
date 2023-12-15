@@ -8,4 +8,9 @@
         "debugTokenExpression.value": "#ffe14a",
         "debugTokenExpression.boolean": "#0d5747"
       },
+      "python.testing.pytestArgs": [
+        "tests"
+      ],
+      "python.testing.unittestEnabled": false,
+      "python.testing.pytestEnabled": true,
 }
