@@ -179,7 +179,15 @@ class Game:
 
 
     def survey_says(self): # TODO: see if generative AI can help do this better
-        pass
+        guess_lower = self.host.guess.lower()
+        
+        for i, item in enumerate(self.answers):
+            if item[0].lower() == guess_lower:
+                self.correct_guesses.append(i)
+                self.host.guess_outcome = True
+                self.points += int(item[1])
+            elif not self.host.guess_outcome:
+                self.host.guess_outcome = False
 
     def big_x(self):
         # Prints a big X for each strike
