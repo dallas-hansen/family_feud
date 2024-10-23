@@ -214,15 +214,7 @@ class Game:
 
 
     def survey_says(self): # TODO: see if generative AI can help do this better
-        guess_lower = self.host.guess.lower()
-
-        for i, item in enumerate(self.answers):
-            if item[0].lower() == guess_lower:
-                self.correct_guesses.append(i)
-                self.host.guess_outcome = True
-                self.points += int(item[1])
-            elif not self.host.guess_outcome:
-                self.host.guess_outcome = False
+        pass
 
     def big_x(self):
         # Prints a big X for each strike
@@ -281,9 +273,9 @@ class Host:
         self.fast_money_contestant = ''
 
 
-    def reset(self, full_reset=False, soft=False):
+    def reset(self, hard_reset=False, soft_reset=False):
         # Resets the game. Changes values to default values again.
-        if soft:
+        if soft_reset:
             self.game.display_line_count = 0
             return
         if self.team_1.turn > len(self.team_1.members) - 1:
@@ -298,7 +290,7 @@ class Host:
         self.team_2.num_of_guesses = 0
         self.answers_still_on_board = True
         self.game.display_line_count = 0
-        if full_reset:
+        if hard_reset:
             self.game.points = 0
             self.game.correct_guesses = []
             self.guess_outcome = False
@@ -403,14 +395,14 @@ def main(debug=False):
     
     while not game.game_over:
         host.next_round()
-        host.reset(full_reset=True)
+        host.reset(hard_reset=True)
         game.get_question()
         game.get_answers()
         game.face_off(host.team_1.members[host.team_1.turn], host.team_2.members[host.team_2.turn], debug=debug)
         host.reset()
         # head to head
         while loop_condition(host):
-            host.reset(soft=True)
+            host.reset(soft_reset=True)
             game.line_break()
             game.display(debug=debug)
             host.get_guess()
