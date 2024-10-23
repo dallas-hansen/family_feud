@@ -2,6 +2,7 @@ import glob
 import json
 import random
 from time import sleep
+from decorators import *
 
 
 class Game:
@@ -22,32 +23,18 @@ class Game:
         self.display_line_count = 0
 
 # TODO: create a working timer
-    # def timer(self):
-    #     # Countdown timer
-    #     self.timer_on = True
-    #     seconds = self.countdown
-    #     while self.timer_on and seconds >= 0:
-    #         timeformat = f'\t:{seconds:02d}'
-    #         print(timeformat, end='\r')
-    #         sleep(1)
-    #         seconds -= 1
-    #     if seconds == 0:
-    #         print(f'\n there are {seconds} left')
-    #         self.timer_on = False
-    #         self.host.add_strike()
-
     
     def face_off(self, player_1, player_2, debug=False):
         rebuttle = False
         won = False
         guesses = 0
-        self.line_break()
+        line_break()
         print('\n HEAD TO HEAD, FIRST TO ANSWER!')
         print(f'\n Would {player_1} and {player_2} please get ready\n')
         print(input('\nPress "Enter" to continue\n'))
         while not won:
             while 0 not in self.correct_guesses:
-                self.line_break()
+                line_break()
                 self.display(debug=debug)
                 self.host.guess = input('What is your guess?\n')
                 self.survey_says()
@@ -119,15 +106,6 @@ class Game:
         # Prints team scores
         print(f'{self.host.team_1.name.upper()} score: {self.host.team_1.points}', end='\t')
         print(f'\t{self.host.team_2.name.upper()} score: {self.host.team_2.points}')
-
-    def line_break(self, symbol1='*', symbol2='*', length=70, second_symbol=True):
-        # Prints a line break
-        if second_symbol:
-            print()
-        print(symbol1 * length)
-        if second_symbol:
-            print(symbol2 * length)
-            print()
     
     def increase_display_line_count(self, amount=1):
         self.display_line_count += amount
@@ -139,10 +117,10 @@ class Game:
         points_box = ('-' * 4)
         area_between_displays = f'\t\t   '
         # Prints the team that is stealing
-        # if self.host.is_stealing:
-        #     self.line_break('/', '\\', 28 + len(self.host.current_team.name))
-        #     print(f'Team {self.host.current_team.name} has a chance to steal!')
-        #     self.line_break('/', '\\', 28 + len(self.host.current_team.name))
+        if self.host.is_stealing:
+            line_break('/', '\\', 28 + len(self.host.current_team.name))
+            print(f'Team {self.host.current_team.name} has a chance to steal!')
+            line_break('/', '\\', 28 + len(self.host.current_team.name))
         print(f'\t\tPOINTS: {self.points}\n')
         self.print_team_scores()
         print(f'\nTop {self.num_of_answers} answers on the board\n')
@@ -187,9 +165,9 @@ class Game:
     def right_display(self, round_over=False, debug=False):
         if self.host.is_stealing:
             if self.display_line_count in [3, 8]:
-                self.line_break('/', '\\', 28 + len(self.host.current_team.name), second_symbol=False)
+                line_break('/', '\\', 28 + len(self.host.current_team.name), second_symbol=False)
             elif self.display_line_count in [4, 9]:
-                self.line_break('\\', '\\', 28 + len(self.host.current_team.name), second_symbol=False)
+                line_break('\\', '\\', 28 + len(self.host.current_team.name), second_symbol=False)
             elif self.display_line_count in [5, 7]:
                 print()
             elif self.display_line_count == 6:
@@ -213,6 +191,6 @@ class Game:
         
     
     def fast_money(self):
-        self.line_break('$', '$', 70)
+        line_break('$', '$', 70)
         print('congrats you made it fast money! Unfortunately nothing is here because I have not made it yet!')
         print("\n you're honestly pretty lucky this code even let us get this far...\n")
